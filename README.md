@@ -1,4 +1,4 @@
-# symlink - Testing `SYMBOLIC_LINK_FLAG_ALLOW_UNPRIVILEGED_CREATE` on Windows
+# symlink - Testing `SYMBOLIC_LINK_FLAG_ALLOW_UNPRIVILEGED_CREATE`
 
 This program tests the ability to create file and directory symlinks on Windows
 with `SYMBOLIC_LINK_FLAG_ALLOW_UNPRIVILEGED_CREATE`, using both of the Windows
@@ -6,7 +6,7 @@ API functions `CreateSymbolicLinkW` and `CreateSymbolicLinkA`.
 
 The "W" and "A" functions are probably equivalent with respect to all aspects
 not involving character encodings, because in the Windows API, "A" functions
-are implemented as wrapper for the corresponding "W" functions.
+are implemented as wrappers for the corresponding "W" functions.
 
 However, as of this writing, `CreateSymbolicLinkW` and `CreateSymbolicLinkA`
 are documented differently, such that it is not clear if the documentation
@@ -39,7 +39,7 @@ must first be enabled on the machine before this option will function. Under
 MSIX, developer mode is not required to be enabled for this flag.
 
 This program can be built in various ways and tested on various systems to
-example this, or otherwise to test the ability to create symlinks.
+examine this, or otherwise to test the ability to create symlinks.
 
 When UAC is enabled, the ability to create symlinks may vary by whether the
 program is run with elevation.
@@ -62,7 +62,7 @@ not exist. But it still proceeds to (attempt to) delete the remaining files.
 ## Results
 
 I ran this as a user with administrative privileges (i.e. a member of the
-`Administrators` group) but with UAC enabled on a Windows 11 machine, *where
+`Administrators` group) but with UAC enabled, on a Windows 11 machine, *where
 developer mode was **not** enabled*, for which:
 
 ```text
