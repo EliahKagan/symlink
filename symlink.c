@@ -245,7 +245,7 @@ static enum status create_symlink_dir_a(void)
         SYMBOLIC_LINK_FLAG_DIRECTORY
         | SYMBOLIC_LINK_FLAG_ALLOW_UNPRIVILEGED_CREATE
     )) {
-        msg(L"created directory symlink \"%s\" to \"%s\"",
+        msg("created directory symlink \"%s\" to \"%s\"",
             symlink_dir_a, target_dir_a);
         return status_success;
     }
